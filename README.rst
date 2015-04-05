@@ -88,3 +88,7 @@ But, you have to run the application using our runner to be run asynchronously.
     if __name__ == '__main__':
         aio.run(app, debug=True)
 
+Documentation
+-------------
+
+`Read the docs<http://flask-aiohttp.readthedocs.org/>`
