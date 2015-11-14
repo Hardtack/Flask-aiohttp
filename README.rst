@@ -1,6 +1,16 @@
 Flask-aiohttp --- Asynchronous Flask using aiohttp.
 ===================================================
 
+**EXPERIMENTAL**
+----------------
+
+I made this project for testing compatability between WSGI & Async IO.
+
+Since WSGI has no consideration of Async IO, Flask-aiohttp cannot be perfect.
+
+So, I don't recommend you to use this library for production. Libraries that was made for Async IO would be better choice (Like gevent, Tornado or AioHTTP).
+
+
 Features
 --------
 
