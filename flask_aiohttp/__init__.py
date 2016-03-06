@@ -114,10 +114,8 @@ class AioHTTP(object):
         # WSGI handler for aiohttp
         wsgi_handler = self.handler_factory(app)
 
-        # aiohttp's router should accept HTTP method of request.
-        # So we add routers for each HTTP methods.
-        for method in aio_app.router.METHODS:
-            aio_app.router.add_route(method, r'/{path:.*}', wsgi_handler)
+        # aiohttp's router should accept any possible HTTP method of request.
+        aio_app.router.add_route('*', r'/{path:.*}', wsgi_handler)
         return aio_app
 
     @staticmethod
